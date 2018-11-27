@@ -20,9 +20,25 @@ public class Solution_ClimbingStairs {
 
 /**
  * 递归方法优化
+ * F(3)=f(2)+f(1)  2+1
+ * F(4)=f(3)+f(2)
+ * cur=f2+f1;
+ * 下一个cur，f2=cur f1=f2;
+ * 把递归转化为循环
  * */
 class Solution2{
     public int climbStairs(int n){
-        return 0;
+        if(n<3){
+            return n;
+        }
+        int f2=2;
+        int f1=1;
+        int cur=0;
+        for(int i=3;i<=n;i++){
+            cur=f2+f1;
+            f1=f2;
+            f2=cur;
+        }
+        return cur;
     }
 }
