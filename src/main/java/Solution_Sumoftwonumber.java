@@ -5,7 +5,7 @@ import java.util.Map;
  * @Author: ddpff
  * @Description:
  * @Date: Create in 20:44 2018\11\24 0024
- * @Modified By: 两数之和：通hashmap实现
+ * @Modified By: 两数之和：通hashmap实现;
  *              原理为：通过减数组中的数，作为key存放在数组中，然后查看map中是否存在数组中的数；
  */
 public class Solution_Sumoftwonumber {
